@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5e6d3;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .box {
+            background: #9B0F06;
+            color: #f5e6d3;
+            padding: 25px;
+            border-radius: 16px;
+            border: 7px solid #5E0006;
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            background: #5E0006;
+            color: #f5e6d3;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>👑 Admin Dashboard</h2>
+    <p id="welcome"></p>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+const firebaseConfig = {
+    apiKey: "AIzaSyA0NPkfK_jdoF95XAy0m_dHrFxmTyTr7kE",
+    authDomain: "sizzle-oman.firebaseapp.com",
+    projectId: "sizzle-oman",
+};
+
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+
+const ADMIN_EMAIL = "admin@sizzle.com";
+
+// 🔒 Protect page
+auth.onAuthStateChanged(user => {
+    if (!user) {
+        window.location.href = "login.html";
+    } else if (user.email !== ADMIN_EMAIL) {
+        alert("Access denied");
+        window.location.href = "index.html";
+    } else {
+        document.getElementById("welcome").innerText =
+            "Welcome, " + user.email;
+    }
+});
+
+function logout() {
+    auth.signOut().then(() => {
+        window.location.href = "login.html";
+    });
+}
+</script>
+
+</body>
+</html>

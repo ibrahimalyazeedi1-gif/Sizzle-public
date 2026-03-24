@@ -1,0 +1,224 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Sizzle</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <div class="header">
+        <img src="images/logo.png" class="logo">
+        <p class="tagline"><b>JUST SIZZLE IT!</b></p>
+    </div>
+
+    <div class="categories">
+        <a href="#chicken">Chicken</a>
+        <a href="#beef">Beef</a>
+        <a href="#sides">Sides</a>
+        <a href="#drinks">Drinks</a>
+    </div>
+
+    <!-- CHICKEN -->
+    <h2 id="chicken" class="section-title">Chicken</h2> 
+    <div class="menu">
+
+        <div class="item" data-id="crispy_chicken">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Crispy Chicken Burger</h3>
+            <div class="price-row">
+                <p>1.3 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="buffalo_chicken">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Buffalo Chicken Burger</h3>
+            <div class="price-row">
+                <p>1.5 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="nashville_chicken">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Nashville Chicken Burger</h3>
+            <div class="price-row">
+                <p>1.5 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="chicken_fries">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Chicken Fries</h3>
+            <div class="price-row">
+                <p>1.5 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BEEF -->
+    <h2 id="beef" class="section-title">Beef</h2>
+    <div class="menu">
+
+        <div class="item" data-id="smash_beef">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Smash Beef Burger</h3>
+            <div class="price-row">
+                <p>1.3 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="double_smash">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Double Smash</h3>
+            <div class="price-row">
+                <p>1.7 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="mushroom_burger">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Mushroom Burger</h3>
+            <div class="price-row">
+                <p>1.5 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="double_mushroom">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Double Mushroom</h3>
+            <div class="price-row">
+                <p>1.8 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SIDES -->
+    <h2 id="sides" class="section-title">Sides</h2>
+    <div class="menu">
+
+        <div class="item" data-id="chips">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Chips</h3>
+            <div class="price-row">
+                <p>0.3 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="cheese_extra">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Cheese (Extra)</h3>
+            <div class="price-row">
+                <p>0.1 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="sauce">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Sauce</h3>
+            <div class="price-row">
+                <p>0.1 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- DRINKS -->
+    <h2 id="drinks" class="section-title">Drinks</h2>
+    <div class="menu">
+
+        <div class="item" data-id="soft_drink">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Soft Drink</h3>
+            <div class="price-row">
+                <p>0.3 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item" data-id="water">
+            <img src="images/Screenshot 2026-03-23 185812.png">
+            <h3>Water</h3>
+            <div class="price-row">
+                <p>0.1 OMR</p>
+                <div class="quantity">
+                    <button onclick="changeQty(this,-1)">-</button>
+                    <span class="count">0</span>
+                    <button onclick="changeQty(this,1)">+</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="cart.html">🛒 Cart</a>
+        <a href="profile.html">👤 Profile</a>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
