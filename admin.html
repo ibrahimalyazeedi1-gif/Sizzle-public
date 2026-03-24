@@ -55,7 +55,11 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
-const ADMIN_EMAIL = "admin@sizzle.com";
+const ADMIN_EMAILS = [
+    "ibrahim.alyazeedi1@gmail.com",
+    "owner@Gmail.com",
+    "manager@Gmail.com"
+];
 
 // 🔒 Protect page
 auth.onAuthStateChanged(user => {
